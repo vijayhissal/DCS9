@@ -1,0 +1,10 @@
+How to Compile & Run (4 Terminals)
+Compile: javac ESBBroker.java Subscriber.java Publisher.java
+
+Terminal 1 (Start ESB): java -cp . ESBBroker
+
+Terminal 2 (Subscriber 1 on news): java -cp . Subscriber 8001 news
+
+Terminal 3 (Subscriber 2 on news): java -cp . Subscriber 8002 news
+
+Terminal 4 (Publish Event): java -cp . Publisher → Topic: news, Message: Exam Started!(Both Terminal 2 and Terminal 3 immediately receive Exam Started! simultaneously!)
